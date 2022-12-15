@@ -7,14 +7,14 @@ namespace Bacana.Models
     {
         public int PostId { get; set; }
 
-        [Required(ErrorMessage = "text is required")]
-        [MaxLength(125, ErrorMessage = "max length is 125 chars")]
-        public string? Description { get; set; }
+        [Required(ErrorMessage = "content is required")]
+        [MaxLength(125, ErrorMessage = "content can't be longer than 125 characters")]
+        public string? Content { get; set; }
 
-        [StringLength(300)]
+        [StringLength(120)]
         public string? Image { get; set; }
 
-        [Required(ErrorMessage = "required id")]
+        [Required(ErrorMessage = "id is required")]
         public int UserId { get; set; }
 
         [JsonIgnore]
