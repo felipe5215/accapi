@@ -1,11 +1,12 @@
-version: "3"
-
+version: "3.8"
 services:
-  db-mysql:
-    container_name: db-mysql
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    ports:
-      - 1433:1433
+  mysql:
+    container_name: mysql_db
+    image: mysql:8.0.21
+    restart: always
     environment:
-      - SA_PASSWORD=topsecret!@
-      - ACCEPT_EULA=Y
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 3306:3306
+    volumes:
+      - ./data/MySQL:/var/liv/mysql
