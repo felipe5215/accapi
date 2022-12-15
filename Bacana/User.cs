@@ -15,11 +15,11 @@ namespace Bacana.Models
         [StringLength(50)]
         public string? Email { get; set; }
 
-        [StringLength(150)]
+        [StringLength(10)]
         public string? IsActive { get; set; }
 
         [Required(ErrorMessage = "password is required")]
-        [StringLength(80)]
+        [StringLength(12)]
         public string? Password { get; set; }
 
         [StringLength(300)]

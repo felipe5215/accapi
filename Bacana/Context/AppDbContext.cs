@@ -7,7 +7,7 @@ namespace Bacana.Context
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Post> Produtos { get; set; }
-        public DbSet<User> Comentarios { get; set; }
+        public DbSet<User>? User { get; set; }
+        public DbSet<Post>? Post { get; set; }
     }
 }
