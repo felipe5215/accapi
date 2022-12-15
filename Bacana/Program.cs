@@ -15,7 +15,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc(
         "v1",
-        new Microsoft.OpenApi.Models.OpenApiInfo { Title = "APITryitter", Version = "v1" }
+        new Microsoft.OpenApi.Models.OpenApiInfo { Title = "LindaAPI", Version = "v1" }
     );
 });
 
@@ -43,5 +43,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
-public partial class Program { }
